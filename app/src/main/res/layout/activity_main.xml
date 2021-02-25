@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edittext0"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@drawable/hex"
+        android:inputType="text"
+        android:layout_marginTop="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext0"
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@drawable/txt"
+        android:inputType="text"
+        android:layout_marginTop="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edittext2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext1"
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@drawable/txt"
+        android:inputType="text"
+        android:layout_marginTop="300dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edittext3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext2"
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@drawable/hex"
+        android:inputType="text"
+        android:layout_marginTop="400dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edittext4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext3"
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@drawable/hex"
+        android:inputType="text"
+        android:layout_marginTop="500dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- NOTE No need to develop a system service for keyboard, there is a standard View for that (well, not completely standard, its in a funny package 'android.inputmethodservice'. -->
+    <!-- NOTE The graphical layout does not know the package ('java.lang.NoClassDefFoundError: Could not initialize class android.inputmethodservice.KeyboardView') so the keyboard is not shown. -->
+    <com.example.android.androidkeyboardtest.KeyboardView
+        android:id="@+id/keyboardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:visibility="gone"
+        app:keyBackground="@drawable/key_bg"
+        app:keyTextColor="@android:color/black"
+        app:keyTextSize="20sp"
+        app:labelTextSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
